@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Kategorijos | Django it!
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Kategorijos</h1>
+    <div class="row">
+        {% for category in categories %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    {% if category.image %}
+                        <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ category.title }}</h5>
+                        <p class="card-text">{{ category.description|truncatewords:20|safe }}</p>
+                        <a href="{% url 'projects:project_list' %}?category={{ category.id }}" class="btn btn-primary">Peržiūrėti projektus</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock css %}
+
+{% block js %}
+<script src="{% static 'js/card_effects.js' %}"></script>
+{% endblock js %}
