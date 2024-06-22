@@ -11,7 +11,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['djangoit.lt', '127.0.0.1', 'localhost', 'my-portfoliosite-b37210491e79.herokuapp.com']
+ALLOWED_HOSTS = ['djangoit.lt', 'www.djangoit.lt', '127.0.0.1', 'localhost', 'my-portfoliosite-b37210491e79.herokuapp.com']
 
 
 INSTALLED_APPS = [
