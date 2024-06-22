@@ -219,6 +219,17 @@ footer {
 .blue:hover {
     border-color: #2980b9; /* Spalva užvedus pelę */
 }
+.blue-a{
+    border: 1px solid rgb(54, 144, 253) ;
+    transition: border-color 0.3s;
+    max-width: 600px; /* maksimalus plotis */
+    margin-bottom: 30px; /* Apatinis tarpas  */
+    margin-top: 10px; /* Viršutinis tarpas  */
+
+}
+.blue-a:hover {
+    border-color: #772303; /* Spalva užvedus pelę */
+}
 
 
 /* Logotipo stiliai */
@@ -263,4 +274,11 @@ footer {
 }
 
 
-
+.contact-container {
+    background-color: rgba(230, 230, 250, 0.5);
+    border-left: 5px solid #007bff;
+    border-right: 5px solid #007bff; /* Pridedame dešinį kraštą */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}

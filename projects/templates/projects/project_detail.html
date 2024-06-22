@@ -16,7 +16,7 @@
                     {% if project.image %}
                         <img src="{{ project.image.url }}" class="small-image" alt="{{ project.title }}">
                     {% endif %}
-                    <h5 class="card-title">Aprašymas</h5>
+{#                    <h5 class="card-title">Aprašymas</h5>#}
 
                     <p class="card-text">{{ project.description|safe }}</p>
                 </div>
@@ -31,10 +31,9 @@
                 {% endif %}
             </div>
 
-            <!-- Atsiliepimų dalis -->
-            <hr class="my-4"> <!-- Atskyrimo linija -->
+            <hr class="my-4">
             <div class="reviews-section">
-                <h5 class="mb-4">Atsiliepimai</h5>
+                <h5 class="mb-4">Atsiliepimai/Komentarai</h5>
                 {% for review in reviews %}
                     <div class="card mb-3">
                         <div class="card-body">
