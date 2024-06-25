@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 from decouple import config
 import dj_database_url
-import django_heroku
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -11,7 +10,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['djangoit.lt', 'www.djangoit.lt', '127.0.0.1', 'localhost', 'my-portfoliosite-b37210491e79.herokuapp.com']
+ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost']
 
 
 INSTALLED_APPS = [
@@ -112,4 +111,3 @@ DEFAULT_FROM_EMAIL = config('EMAIL_HOST_USER')
 
 from .tinymce_config import TINYMCE_DEFAULT_CONFIG
 
-django_heroku.settings(locals())
