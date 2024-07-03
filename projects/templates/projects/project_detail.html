@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.title }} | Django it!{% endblock title %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="mb-4">{{ project.title }}</h1>
+
+            <div class="card mb-4">
+
+                <div class="card-body">
+
+                    {% if project.image %}
+                        <img src="{{ project.image.url }}" class="small-image" alt="{{ project.title }}">
+                    {% endif %}
+{#                    <h5 class="card-title">Aprašymas</h5>#}
+
+                    <p class="card-text">{{ project.description|safe }}</p>
+                </div>
+            </div>
+            <div class="button-area d-flex mb-4">
+                {% if previous_project %}
+                    <a class="btn btn-primary mr-2" href="{% url 'projects:project_detail' previous_project.id %}">Atgal</a>
+                {% endif %}
+                <a class="btn btn-primary mr-auto" href="{% url 'projects:project_list' %}">Į pradžią</a>
+                {% if next_project %}
+                    <a class="btn btn-primary ml-auto" href="{% url 'projects:project_detail' next_project.id %}">Pirmyn</a>
+                {% endif %}
+            </div>
+
+            <hr class="my-4">
+            <div class="reviews-section">
+                <h5 class="mb-4">Atsiliepimai/Komentarai</h5>
+                {% for review in reviews %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">{{ review.user.username }}</h6>
+                            <p class="card-text">{{ review.text }}</p>
+                            <p class="card-text"><small class="text-muted">{{ review.created_at|date:"Y-m-d H:i" }}</small></p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% if user.is_authenticated %}
+                    <form method="post" action="{% url 'projects:review_create' project.pk %}">
+                        {% csrf_token %}
+                        {{ review_form.as_p }}
+                        <button type="submit" class="btn btn-primary">Palikti atsiliepimą</button>
+                    </form>
+                {% else %}
+                    <p>Norėdami palikti atsiliepimą, <a href="{% url 'users:login' %}?next={{ request.path }}">prisijunkite</a>.</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Kiti Projektai</h5>
+                    <ul class="list-group list-group-flush">
+                        {% for other_project in related_projects %}
+                            <li class="list-group-item">
+                                <a href="{{ other_project.get_absolute_url }}">{{ other_project.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

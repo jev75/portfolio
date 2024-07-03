@@ -1,0 +1,15 @@
+../.venv/
+.venv/
+venv/
+
+.idea/
+
+desktop.ini
+
+__pycache__/
+
+*.txt
+*.bat
+web.config
+
+.env

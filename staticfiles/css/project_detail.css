@@ -1,0 +1,118 @@
+/* HTML ir body bendri stiliai */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Vertikalus išdėstymas */
+}
+
+h1.mb-4 {
+    color: rgba(12, 0, 0, 0.93); /* Teksto spalva */
+    font-size: 2.5rem; /* Šrifto dydis */
+    text-align: center; /* Centruotas tekstas */
+    margin-bottom: 2rem !important; /* Apatinis tarpas */
+}
+
+.lead {
+    font-size: 1.25rem !important; /* Šrifto dydis */
+    font-weight: 400; /* Šrifto svoris */
+    text-align: left; /* Centruotas tekstas */
+    margin-bottom: 1.5rem; /* Apatinis tarpas */
+    color: #252727; /* Teksto spalva */
+}
+
+
+/* Fono gradientas visam puslapiui */
+body {
+    background: #abbaab;
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+    background: linear-gradient(to right, #ffffff, #abbaab);
+}
+
+/* Fono gradientas #section-jumbotron sekcijai */
+
+
+/* Konteineris, kuris užims visą likusį vietą tarp navigacinės juostos ir footer */
+
+
+/* Navigacijos ir footer bendri stiliai */
+.navbar-custom, .custom-footer-bg {
+    background-color: rgba(12, 0, 0, 0.93); /* Fono spalva */
+    color: white !important; /* Užrašų spalva */
+}
+
+/* Footer stiliai */
+footer {
+    flex-shrink: 0; /* Footer visada matomas apačioje */
+    width: 100%; /* Užima visą plotį */
+    text-align: center; /* Centruotas tekstas */
+    padding: 10px 0; /* Vertikalus padding */
+}
+
+/* Nuorodų spalva footeryje */
+.custom-footer-bg a {
+    color: white; /* Nuorodų spalva */
+    text-decoration: underline !important; /* Pabrauktos nuorodos */
+}
+
+.custom-footer-bg a:hover {
+    color: #ffd700 !important; /* Spalva užvedus pelę */
+}
+
+.small-image {
+    width: 150px;
+    height: auto;
+    float: right;
+    margin-left: 10px; /* Šiek tiek vietos tarp vaizdo ir teksto */
+    opacity: 0.5; /* Nustatome pradinį peršviečiamumą */
+    transition: opacity 0.5s; /* Pereinamoji animacija */
+}
+
+.small-image:hover {
+    opacity: 1; /* Pilnas neperšviečiamumas, kai užvedama pelė */
+
+}
+.card-text img {
+    max-width: 100% !important; /* Užtikrina, kad vaizdai būtų ne didesni nei tėvinis konteineris */
+    height: auto;
+}
+
+.blue {
+    border: 2px solid #0b569d;
+    transition: border-color 0.3s;
+    max-width: 800px; /* Nustatytas maksimalus plotis */
+    margin: 0 auto; /* Centruoti hr elementą */
+    margin-bottom: 30px; /* Apatinis tarpas 20px */
+    /*box-shadow: 0 2px 5px rgb(225, 11, 28); !* Šešėlis aplink elementą *!*/
+
+}
+
+.blue:hover {
+    border-color: #2980b9; /* Spalva užvedus pelę */
+}
+
+/* Papildoma nuorodų spalva KOL KAS NENNAUDOJAMAS*/
+
+
+/* Pagrindiniai stiliai KOL KAS NENNAUDOJAMAS */
+
+
+
+
+/* Formos stiliai KOL KAS NENNAUDOJAMAS*/
+
+
+
+/* Formos stiliai KOL KAS NENNAUDOJAMAS*/
+
+
+/* Mygtuko stiliai KOL KAS NENNAUDOJAMAS*/
+
+
+/* Pagination stiliai KOL KAS NENNAUDOJAMAS */
+
+
+/* Projekto detalės puslapio stiliai list-group-item a */
+
+
+/*card-text / card-body/ card-title/ card/ card-img-top */

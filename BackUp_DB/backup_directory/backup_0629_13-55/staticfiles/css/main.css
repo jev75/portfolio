@@ -1,0 +1,174 @@
+/* H1 antraštės stiliai */
+/* 1. */
+h1.mb-4 {
+    color: rgba(12, 0, 0, 0.93); /* Teksto spalva */
+    font-size: 2.5rem; /* Šrifto dydis */
+    text-align: left; /* teksto išdėstymas */
+    margin-bottom: 2rem !important; /* Apatinis tarpas */
+}
+
+/* HTML ir body bendri stiliai */
+/* 2. */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Vertikalus išdėstymas */
+}
+/* Fono gradientas visam puslapiui */
+/* 3. */
+body {
+    background: #abbaab;
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+    background: linear-gradient(to right, #ffffff, #abbaab);
+}
+/* Konteineris, tarp navigacinės juostos ir footer */
+/* 5. */
+.container-flex {
+    flex: 1; /* Užima visą likusį aukštį */
+}
+
+/* Navigacijos ir footer bendri stiliai */
+/* 6. */
+.navbar-custom, .custom-footer-bg {
+    background-color: rgba(12, 0, 0, 0.93); /* Fono spalva */
+    color: white !important; /* Užrašų spalva */
+}
+
+/* Nuorodų spalva footeryje */
+/* 8. */
+.custom-footer-bg a {
+    color: white; /* Nuorodų spalva */
+    text-decoration: underline !important; /* Pabrauktos nuorodos */
+}
+.custom-footer-bg a:hover {
+    color: #ffd700 !important; /* Spalva užvedus pelę */
+}
+
+/* Pagrindiniai stiliai  */
+/* 10. */
+.container {
+    max-width: 1300px; /* Maksimalus plotis */
+    margin: auto; /* Centruota */
+}
+
+/* užrašo <p> stiliai */
+/* 11. */
+.lead {
+    font-size: 1.25rem !important; /* Šrifto dydis */
+    font-weight: 400; /* Šrifto svoris */
+    text-align: left; /* Centruotas tekstas */
+    margin-bottom: 1rem; /* Apatinis tarpas */
+    color: #252727; /* Teksto spalva */
+}
+
+/* Formos stiliai Filtravimo langelis*/
+/* 12. */
+.form-inline {
+    display: flex; /* Flexbox išdėstymas */
+    justify-content: center; /* Centruota horizontaliai */
+    margin-bottom: 2rem; /* Apatinis tarpas */
+}
+/* Formos stiliai */
+.form-inline label {
+    /*margin-right: 0.5rem; !* Dešinysis tarpas *!*/
+}
+/* Mygtuko stiliai */
+/* 13. */
+.btn-primary {
+    background-color: #3498db; /* Fono spalva */
+    border-color: #3498db; /* Rėmelio spalva */
+    transition: background-color 0.2s ease, border-color 0.2s ease; /* Perėjimo efektai */
+}
+/* Mygtuko stiliai */
+.btn-primary:hover {
+    background-color: #023150; /* Fono spalva užvedus pelę */
+    border-color: #023150; /* Rėmelio spalva užvedus pelę */
+}
+
+/* Paveikslėlio dydis ir peršviečiamumas */
+/* 16. */
+.small-image {
+    width: 150px;
+    height: auto;
+    float: right;
+    margin-left: 10px; /* Šiek tiek vietos tarp vaizdo ir teksto */
+    opacity: 0.7; /* Nustatome pradinį peršviečiamumą */
+    transition: opacity 0.5s; /* Pereinamoji animacija */
+}
+.small-image:hover {
+    opacity: 1; /* Pilnas neperšviečiamumas, kai užvedama pelė */
+}
+/* 21. */
+.card-title {
+    font-size: 1.5rem; /* Šrifto dydis */
+    margin-bottom: 1rem; /* Apatinis tarpas */
+}
+
+/* Kortelės padidinimas, kai užvedama pelė */
+/* 22. */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s; /* Perėjimai vaizdo ir šešėlio keitimui */
+}
+.card:hover {
+    transform: scale(1.05); /* Padidinimas užvedus pelę */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Šešėlis užvedus pelę */
+}
+/* Linijos hr stiliai */
+/* 24. */
+.blue {
+    border: 1px solid rgb(2, 54, 116);
+    transition: border-color 0.3s;
+    max-width: 1100px; /* maksimalus plotis */
+    margin-bottom: 30px; /* Apatinis tarpas  */
+    margin-top: -10px; /* Viršutinis tarpas  */
+
+}
+.blue:hover {
+    border-color: #3fc36a; /* Spalva užvedus pelę */
+}
+.blue-a{
+    border: 1px solid rgb(54, 144, 253) ;
+    transition: border-color 0.3s;
+    max-width: 600px; /* maksimalus plotis */
+    margin-bottom: 30px; /* Apatinis tarpas  */
+    margin-top: 20px; /* Viršutinis tarpas  */
+
+}
+.blue-a:hover {
+    border-color: #772303; /* Spalva užvedus pelę */
+}
+
+.contact-container {
+    background-color: rgba(230, 230, 250, 0.5);
+    font-size: 1.2rem;
+    border-left: 1px solid #007bff;
+    border-right: 1px solid #007bff; /* Pridedame dešinį kraštą */
+    padding: 20px;
+    margin-top: 60px !important;
+    border-radius: 8px;
+}
+
+.black {
+    border: 1px solid rgb(2, 54, 116);
+    transition: border-color 0.3s;
+    max-width: 1300px; /* maksimalus plotis */
+    margin-bottom: 20px; /* Apatinis tarpas  */
+    margin-top: 40px; /* Viršutinis tarpas  */
+}
+.black:hover {
+    border-color: #3fc36a; /* Spalva užvedus pelę */
+}
+
+/* Eilutės išdėstymas bet kurioje vietoje */
+/* 26. */
+.fixed-bottom {
+    position: relative;
+    /*bottom: 10px;*/
+    top: -160px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.0); /* Baltas fonas su 80% peršviečiamumu */
+    padding: 10px 0;
+    color: rgb(62, 100, 26);
+}
